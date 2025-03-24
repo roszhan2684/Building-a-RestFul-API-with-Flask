@@ -1,17 +1,11 @@
 # Building-a-RestFul-API-with-Flask
-Web Backend Project
-Absolutely! Here's a `README.md` you can use for your Flask API project. It documents setup, usage, endpoints, and more.
-
----
-
-```markdown
-# 🔐 Flask API with JWT Authentication & MySQL
+# Flask API with JWT Authentication & MySQL
 
 A secure RESTful API built with **Flask**, **MySQL**, and **JWT Authentication** to handle user registration, login, and protected routes.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Flask_API_Project/
@@ -20,28 +14,30 @@ Flask_API_Project/
 │   ├── __init__.py       # App factory & configuration
 │   ├── auth.py           # Authentication routes (register, login)
 │   ├── models.py         # Database helper functions
+|   ├── file_handler.py   # File handler route (upload)
+|   ├── uploads/          # Folder to store uploaded files
+|   ├── routes/           # Folder to store admin and public routes
 │
 ├── config.py             # Configuration for Flask & MySQL
 ├── run.py                # Entry point for running the Flask app
-├── uploads/              # Folder to store uploaded files (if needed)
 ├── venv/                 # Python virtual environment
-└── README.md             # You're reading this 🙂
+└── README.md             # This file
 ```
 
 ---
 
-## 🚀 Features
+## Features
 
-- ✅ User registration
-- ✅ Secure password hashing (via `werkzeug.security`)
-- ✅ JWT-based login system
-- ✅ MySQL database integration
-- ✅ Protected routes support
-- ✅ File upload support (config-ready)
+- User registration
+- Secure password hashing (via `werkzeug.security`)
+- JWT-based login system
+- MySQL database integration
+- Protected routes support
+- File upload support (config-ready)
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### 1. Clone the repository
 ```bash
@@ -70,9 +66,9 @@ pip install flask flask-jwt-extended flask-mysqldb werkzeug
 Make sure MySQL is running. Create the database:
 
 ```sql
-CREATE DATABASE roszhan_api;
+CREATE DATABASE <INSERT_DATABASE_NAME>;
 
-USE roszhan_api;
+USE <INSERT_DATABASE_NAME>;
 
 CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -81,11 +77,11 @@ CREATE TABLE users (
 );
 ```
 
-> ✅ No password for `root` user? Leave the `MYSQL_PASSWORD` as an empty string in `config.py`.
+> No password for `root` user? Leave the `MYSQL_PASSWORD` as an empty string in `config.py`.
 
 ---
 
-## 🔑 Environment Configuration
+## Environment Configuration
 
 Update `config.py`:
 
@@ -97,14 +93,14 @@ class Config:
     MYSQL_USER = 'root'
     MYSQL_PASSWORD = ''         # Leave blank if no password
     MYSQL_DB = 'roszhan_api'
-    UPLOAD_FOLDER = 'uploads'
+    UPLOAD_FOLDER = os.path.join(os.getcwd(),'app' ,'uploads')
     MAX_CONTENT_LENGTH = 2 * 1024 * 1024
     ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'pdf'}
 ```
 
 ---
 
-## ▶️ Running the App
+## Running the App
 
 ```bash
 python run.py
@@ -114,9 +110,9 @@ The API will be available at: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 ---
 
-## 📬 API Endpoints
+## API Endpoints
 
-### 🔹 Register a user
+### Register a user
 **POST** `/auth/register`
 
 **Body:**
@@ -149,7 +145,7 @@ The API will be available at: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 ---
 
-### 🔒 Protected Route (Example)
+### Protected Route (Example)
 Add your own protected route like:
 
 ```python
@@ -169,7 +165,7 @@ Use **Postman** or **cURL** to test the endpoints.
 
 ---
 
-## 📌 Notes
+## Notes
 
 - All passwords are hashed using `werkzeug.security.generate_password_hash`.
 - JWT tokens are returned on successful login.
@@ -177,10 +173,10 @@ Use **Postman** or **cURL** to test the endpoints.
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Roszhan Raj Meenakshi Sundhresan**
-
+**Jenny Phan**
 ---
 
 ## 🏁 License
@@ -189,5 +185,3 @@ This project is licensed under the MIT License.
 ```
 
 ---
-
-Would you like me to generate a `requirements.txt` file too based on your dependencies?
