@@ -51,3 +51,8 @@ def delete_item(item_id):
         return jsonify({'message': 'Delete failed'}), 500
 
     return jsonify({'message': 'Item deleted'}), 200
+
+@admin_bp.route('/dashboard', methods=['GET'])
+@jwt_required()
+def homepage():
+    return jsonify({'message': 'Welcome to the dashboard'}), 200
