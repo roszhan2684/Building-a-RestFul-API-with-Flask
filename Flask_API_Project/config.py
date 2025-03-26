@@ -28,6 +28,6 @@ class Config:
     MYSQL_PASSWORD = ''        # ← EMPTY string since there's no password
     MYSQL_DB = 'roszhan_api'
 
-    UPLOAD_FOLDER = os.path.join(os.getcwd(), 'uploads')
+    UPLOAD_FOLDER = os.path.join(os.getcwd(),'app' ,'uploads')
     MAX_CONTENT_LENGTH = 2 * 1024 * 1024  # 2MB
     ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'pdf'}

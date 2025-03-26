@@ -5,8 +5,8 @@ Building a RESTful API with Flask - Error Handling, Authentication, and File Han
 
 ## Team Members:
 - Roszhan Raj Meenakshi Sundhresan
-- Member 2 Name
-- Member 3 Name
+- Jenny Phan
+- Sufyaan
 
 ## Features Implemented:
 - JWT Authentication (Login/Register)
@@ -65,13 +65,9 @@ python run.py
 - `/items` - CRUD
 
 ## Deliverables
-- ✅ GitHub Repo with Source Code
-- ✅ `requirements.txt`
-- ✅ Screenshot of Postman
-- ✅ Demo Video showing login and file upload endpoints
+- GitHub Repo with Source Code
+- `requirements.txt`
+- Screenshot of Postman
+- Demo Video showing login and file upload endpoints
 
 ---
-
-Feel free to reach out with questions or issues!
-
-Happy Coding! 🚀
