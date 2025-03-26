@@ -113,9 +113,9 @@ The API will be available at: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 ## API Endpoints
 
 ### Register a user
-**POST** `/auth/register`
+# POST `/auth/register`
 
-**Body:**
+# Body:
 ```json
 {
   "username": "roszhan",
@@ -125,10 +125,10 @@ The API will be available at: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 ---
 
-### 🔹 Login and receive JWT
-**POST** `/auth/login`
+### Login and receive JWT
+# POST `/auth/login`
 
-**Body:**
+# Body:
 ```json
 {
   "username": "roszhan",
@@ -136,7 +136,7 @@ The API will be available at: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 }
 ```
 
-**Response:**
+# Response:
 ```json
 {
   "access_token": "JWT_TOKEN_HERE"
@@ -159,7 +159,7 @@ def dashboard():
 
 ---
 
-## 🧪 Testing
+## Testing
 
 Use **Postman** or **cURL** to test the endpoints.
 
@@ -175,11 +175,12 @@ Use **Postman** or **cURL** to test the endpoints.
 
 ## Author
 
-**Roszhan Raj Meenakshi Sundhresan**
-**Jenny Phan**
+Roszhan Raj Meenakshi Sundhresan
+Jenny Phan
+Sufyaan
 ---
 
-## 🏁 License
+## License
 
 This project is licensed under the MIT License.
 ```

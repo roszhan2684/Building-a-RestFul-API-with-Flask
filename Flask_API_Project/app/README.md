@@ -25,23 +25,23 @@ Building a RESTful API with Flask - Error Handling, Authentication, and File Han
 
 ## Setup Instructions:
 
-1. **Clone the Repository**
+# 1. Clone the Repository
 ```bash
 git clone <your-repo-link>
 cd flask_api_project
 ```
 
-2. **Create Virtual Environment and Install Requirements**
+# 2. Create Virtual Environment and Install Requirements
 ```bash
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
 ```
 
-3. **Configure MySQL Database**
+# 3. Configure MySQL Database
 Create a database named `flaskapi` and run `schema.sql` in your MySQL client.
 
-4. **Set Environment Variables (Optional)**
+# 4. Set Environment Variables (Optional)
 Create a `.env` file and add:
 ```
 SECRET_KEY=your_secret_key
@@ -52,19 +52,19 @@ MYSQL_PASSWORD=your_password
 MYSQL_DB=flaskapi
 ```
 
-5. **Run the Application**
+# 5. Run the Application
 ```bash
 python run.py
 ```
 
-6. **Test Endpoints with POSTMAN**
+# 6. Test Endpoints with POSTMAN
 - `/register`, `/login` - Auth
 - `/admin-only` - JWT protected
 - `/upload` - File upload
 - `/public-items` - Public access
 - `/items` - CRUD
 
-## Deliverables
+# 7. Deliverables
 - GitHub Repo with Source Code
 - `requirements.txt`
 - Screenshot of Postman
